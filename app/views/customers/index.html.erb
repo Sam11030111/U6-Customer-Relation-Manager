@@ -1,0 +1,10 @@
+<div class="container p-6">
+    <h1 class="mb-4 has-text-black is-size-1">All Customers</h1>
+    <div class="grid is-gap-2">
+    <% @customers.each do |customer| %>
+        <div class="cell">
+        <%= render partial: 'customer', locals: { customer: customer } %>
+        </div>
+    <% end %>
+    </div>
+</div>

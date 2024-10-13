@@ -1,0 +1,14 @@
+<div class="card has-background-white has-shadow">
+  <div class="card-image">
+    <% if customer.image.attached? %>
+      <figure class="image is-4by3">
+        <%= image_tag customer.image, size: "300x300" %>
+      </figure>
+    <% end %>
+  </div>
+  <div class="card-content">
+    <p class="title is-4 has-text-black"><%= customer.full_name %></p>
+    <p class="title is-6 has-text-dark"><%= customer.phone_number %></p>
+    <p class="title is-6 has-text-dark"><%= customer.email.present? ? customer.email : 'No Email' %></p>
+  </div>
+</div>
